@@ -1,0 +1,33 @@
+{
+  "name": "HeyTaco",
+  "description": "Employe recognition on Slack",
+  "website": "https://github.com/stevenspiel/heyTaco",
+  "repository": "https://github.com/stevenspiel/heyTaco",
+  "keywords": [
+    "slack",
+    "karma",
+    "pluspl.us"
+  ],
+  "env": {
+    "SLACK_BOT_USER_OAUTH_ACCESS_TOKEN": {
+      "description": "Token provided by Slack for your bot user when installing the app to your team. Find this under Basic Information -> OAuth & Permissions within your Slack app management page.",
+      "value": "xoxp-00000000000-000000000000-xxxxxxxxxxxxxxxxxxxxxxxx"
+    },
+    "SLACK_VERIFICATION_TOKEN": {
+      "description": "Verification Token provided by Slack. Find this under Basic Information -> App Credentials within your Slack app management page.",
+      "value": "xxxxxxxxxxxxxxxxxxxxxxxx"
+    },
+    "YARN_PRODUCTION": {
+      "description": "This configures Heroku to only install production dependencies. See https://devcenter.heroku.com/articles/nodejs-support#package-installation for more details.",
+      "value": "true"
+    }
+  },
+  "addons": [
+    "heroku-postgresql"
+  ],
+  "buildpacks": [
+    {
+      "url": "heroku/nodejs"
+    }
+  ]
+}
