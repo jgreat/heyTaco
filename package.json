@@ -1,7 +1,7 @@
 {
   "name": "taco",
   "version": "1.0.0",
-  "description": "Employe recognition on Slack",
+  "description": "Employee recognition on Slack",
   "main": "index.js",
   "repository": "git@github.com:stevenspiel/heyTaco.git",
   "author": "Steven Spiel <stevenspiel@gmail.com>",
@@ -17,7 +17,7 @@
   },
   "engines": {
     "node": "14.1.0",
-    "yarn": "1.22.18"
+    "yarn": "1.22.4"
   },
   "keywords": [
     "slack",
