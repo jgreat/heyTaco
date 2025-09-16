@@ -1,0 +1,45 @@
+replicaCount: 1
+
+image:
+  repository: jgreat/heytaco
+  pullPolicy: Always
+  tag: ""
+
+imagePullSecrets: []
+nameOverride: ""
+fullnameOverride: ""
+
+podAnnotations: {}
+podLabels: {}
+podSecurityContext: {}
+securityContext: {}
+
+service:
+  port: 8080
+
+ingress:
+  hostname: heytaco.local
+  annotations:
+    cert-manager.io/cluster-issuer: letsencrypt-production-http
+  className: ""
+
+resources:
+  limits:
+    cpu: 100m
+    memory: 512Mi
+  requests:
+    cpu: 100m
+    memory: 128Mi
+
+livenessProbe:
+  httpGet:
+    path: /
+    port: http
+readinessProbe:
+  httpGet:
+    path: /
+    port: http
+
+nodeSelector: {}
+tolerations: []
+affinity: {}
